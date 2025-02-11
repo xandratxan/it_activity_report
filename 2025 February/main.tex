@@ -1,0 +1,261 @@
+\documentclass{beamer}
+
+\usetheme[secheader]{Madrid}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[table]{xcolor}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[edges]{forest}
+\usetikzlibrary{trees}
+
+\usepackage{pifont}
+
+\newcommand{\highlight}[1]{{\color{blue} #1}}
+\newcommand{\pending}[1]{{\color{red} #1}}
+\newcommand{\done}{{\color{green}\ding{52}}}
+\newcommand{\todo}{{\color{red}\ding{56}}}
+\newcommand{\doing}{{\color{orange}\ding{229}}}
+\newcommand{\new}{{\colorbox{blue!30}{\textcolor{white}{\textbf{\scriptsize New!}}}}}
+\newcommand{\goal}{{\colorbox{green!30}{\textcolor{white}{\textbf{\scriptsize Goal!}}}}}
+\newcommand{\focus}{{\colorbox{red!30}{\textcolor{white}{\textbf{\tiny !}}}}}
+
+\title{Primera Reunión General del LMRI}
+\subtitle{TIC: Unidad de Tecnologías de la Información y el Conocimiento}
+\author[X. Campo]{Xandra Campo}
+\institute[LMRI-CIEMAT]{Laboratorio de Metrología de Radiaciones Ionizantes (LMRI) \newline CIEMAT}
+\date{13 de febrero de 2025}<
+
+\begin{document}
+
+	\maketitle
+
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents
+	\end{frame}
+
+	\section{Unidad de TIC}
+
+	\subsection{Proyectos}
+
+	\subsubsection{IR14: EURAMET GuideRadPROS project}
+
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{IR14: EURAMET GuideRadPROS project}
+		\begin{columns}
+			\column{0.44\textwidth}
+				\begin{itemize}
+					\item \highlight{Pagina web proyecto} \done
+					\begin{itemize}
+						\item Prácticas FP  \done
+					\end{itemize}
+					\item \highlight{Librería USpekPy} \doing
+					\begin{itemize}
+						\item Aplicación web \doing
+						\begin{itemize}
+							\item Prácticas FP \done
+						\end{itemize}
+						\item Seminario de uso \done
+						\item Script ficheros entrada \done
+						\item Script análisis librería \done
+						\item Publicar SpekPy \done
+					\end{itemize}
+				\end{itemize}
+			\column{0.56\textwidth}
+				\begin{itemize}
+					\item \highlight{Análisis de datos} \doing
+					\begin{itemize}
+						\item Script espectrometría \done
+						\item Script medida de HVL \todo
+						\item Script gráficas para análisis \todo
+						\item Script caracterización haces \new
+					\end{itemize}
+					\item \highlight{Otros}
+					\begin{itemize}
+						\item Estancia Joonas Tikkanen, STUK (¿verano 2025?) \new
+						\item Curso Calibrating photon dosimeters to ISO 4037 standards (20-22 mayo, Atenas) \new
+					\end{itemize}
+				\end{itemize}
+		\end{columns}
+
+	\end{frame}
+
+	\subsubsection{IR14-D: Patrones dosimétricos de rayos X}
+
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{IR14-D: Patrones dosimétricos de rayos X}
+		\begin{itemize}
+			\item \highlight{Automatización cadena de medida} \doing \ \textbf{?}
+			\begin{itemize}
+				\item Aplicación de escritorio calibración \doing
+				\item Librería MetPyX \doing
+			\end{itemize}
+			\item \highlight{Aplicación lectura barómetro} \done
+			\item \highlight{Scripts} \doing
+			\begin{itemize}
+				\item Espectrometría experimental \done
+				\item Medida de HVL \todo
+				\item Calibración \doing
+				\item Asignación de dosis \todo
+			\end{itemize}
+			\item \highlight{Librería MetPyX} \doing \ \textbf{?}
+		\end{itemize}
+	\end{frame}
+
+	\subsubsection{LMRI}
+
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{LMRI}
+		\begin{itemize}
+			\item \highlight{Organización GitHub} \done
+			\item \highlight{Servidores LMRI} \doing \ \textbf{?}
+			\begin{itemize}
+				\item Interno \doing
+				\item Externo \doing
+			\end{itemize}
+			\item \highlight{Librería MetPy} \doing \ \textbf{?}
+			\begin{itemize}
+				\item Calculo de incertidumbres \todo
+				\item Interpolador \doing
+			\end{itemize}
+			\item \highlight{Curso ecosistema de trabajo de Python} \todo
+			\item Página web LMRI
+			\begin{itemize}
+				\item \highlight{Modernización} de la web del LMRI \todo
+				\item Aplicación web solicitud de \highlight{servicios técnicos} \doing
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\subsubsection{IR 13: Metrología de radionucleidos}
+
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{IR 13: Metrología de radionucleidos}
+		\begin{itemize}
+			\item \highlight{Librería MetPyRad} \doing \ \new
+			\begin{itemize}
+				\item Procesado ficheros salida Hidex 300 SL \doing
+				\item Procesado ficheros salida contador de VP \todo
+				\item Procesado ficheros salida prototipo TDCR \todo
+				\item Calculo periodo de semidesintegración desde ficheros \todo
+			\end{itemize}
+			\item \highlight{Aplicación de escritorio protopipo TDCR} \doing \ \new
+		\end{itemize}
+	\end{frame}
+
+	\subsubsection{Otros}
+
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{Otros}
+		\begin{itemize}
+			\item \highlight{Reuniones} \new
+			\begin{itemize}
+				\item EURAMET Spring Camp on Digitalisation (25-28 marzo, Bratislava)
+			\end{itemize}
+			\item \highlight{Formación} \new
+			\begin{itemize}
+				\item Curso INAP Programación web (17 febrero - 7 abril, online)
+				\item Curso Prevención y actuación temprana frente al acoso sexual y por razón de sexo, incluido en el ámbito digital (20-24 febreo, online)
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\subsubsection{Enlaces de interés}
+	
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{Herramientas públicas: enlaces de interés}
+		\centering
+		\scriptsize
+		\rowcolors{2}{gray!15}{white}
+		\begin{tabular}{ll}			
+			\rowcolor{blue!40}
+			{\color{white}GuideRadPROS}&\\
+			Web del proyecto&https://github.com/lmri-met/sites-guideradpros\\
+			&https://lmri-met.github.io/sites-guideradpros/\\
+			USpekPy: Librería&https://github.com/lmri-met/uspekpy\\
+			USpekPy: Seminario&https://github.com/xandratxan/uspekpy-seminar\\
+			USpekPy: Análisis librería&https://github.com/xandratxan/using-uspekpy\\
+			USpekPy: Generador input&https://github.com/xandratxan/uspekpy-input-generator\\
+			USpekPy: Aplicación web&https://github.com/lmri-met/uspekpy-web\\
+			SpekPy: Librería&https://pypi.org/project/spekpy/\\
+			\rowcolor{blue!40}
+			{\color{white}IR14-D}&\\
+			MetPyX: Librería&https://github.com/lmri-met/metpyx\\
+			\rowcolor{blue!40}
+			{\color{white}IR13}&\\
+			MetPyRad: Librería&https://github.com/lmri-met/metpyrad\\
+			\rowcolor{blue!40}
+			{\color{white}LMRI}&\\
+			Organización del LMRI en GitHub&https://github.com/lmri-met\\
+			Librería incertidumbres&https://github.com/xandratxan/physical-magnitude\\
+		\end{tabular}
+	\end{frame}
+	
+	\subsection{Objetivos}
+
+	\begin{frame}
+		\frametitle{Objetivos}
+		\framesubtitle{Segundo semestre 2024 y primer cuatrimestre 2025}
+		\centering
+		\scriptsize
+		\rowcolors{2}{gray!15}{white}
+		\begin{tabular}{lcccc}
+			&S1 2024&S2 2024&C1 2025&C2 2025\\
+			\rowcolor{blue!40}
+			{\color{white}GuideRadPROS}&&&&\\
+			USpekPy: Aplicación web                    &\doing&\doing&\doing&\doing\\
+			Análisis: Script medida de HVL             &      &      &\todo &\\
+			Análisis: Script gráficas para análisis    &      &      &\todo &\\
+			Análisis: Caracterización haces \focus     &      &      &\todo &\\
+			\rowcolor{blue!40}
+			{\color{white}IR14-D}&&&&\\
+			Aplicación escritorio calibración&\doing&\doing&\textbf{?}&\textbf{?}\\
+			Librería MetPyX                  &\doing&\doing&\textbf{?}&\textbf{?}\\
+			\rowcolor{blue!40}
+			{\color{white}IR13}&&&&\\
+			MetPyRad: Soporte Hidex 300 SL \focus          &&&\doing&\\
+			MetPyRad: Soporte equipo VP \focus             &&&\todo &\doing\\
+			MetPyRad: Soporte cálculo periodo \focus       &&&\todo &\doing\\
+			Aplicación de escritorio prototipo TDCR \focus &&&\doing&\doing\\
+			\rowcolor{blue!40}
+			{\color{white}LMRI}&&&&\\
+			Servidor web externo   &\doing&\doing&\doing    &\doing\\
+			Servidor web interno   &\doing&\doing&\textbf{?}&\textbf{?}\\
+			Curso ecosistema Python&      &\todo &\textbf{?}&\textbf{?}\\
+		\end{tabular}
+	\end{frame}
+	
+	\subsection{Necesidades y propuestas}
+	
+	\begin{frame}
+		\frametitle{Necesidades y propuestas}
+		\highlight{Propuestas}
+		\begin{itemize}
+			\item Validación de hojas de cálculo de calibración y/o asignación de dosis con scripts de Python
+		\end{itemize}
+		\highlight{Necesidades}
+		\begin{itemize}
+			\item Ordenador + periféricos para servidor interno \done
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{}
+	
+	\begin{frame}
+		\begin{block}{}
+			\centering
+			¡Gracias por vuestra atención!
+		\end{block}
+	\end{frame}
+
+\end{document}
