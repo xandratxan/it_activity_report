@@ -14,6 +14,15 @@
 
 \usepackage{pifont}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=cyan,        % color of internal links (change box color with linkbordercolor)
+%    filecolor=magenta,     % color of file links
+    urlcolor=cyan,         % color of external links
+%    citecolor=green        % color of citation links
+}
+
 \newcommand{\highlight}[1]{{\color{blue} #1}}
 \newcommand{\pending}[1]{{\color{red} #1}}
 \newcommand{\done}{{\color{green}\ding{52}}}
@@ -151,6 +160,30 @@
 		\end{itemize}
 	\end{frame}
 
+	\begin{frame}
+		\frametitle{Proyectos}
+		\framesubtitle{IR 13: Metrología de radionucleidos}
+		\hypertarget{targetframe}{}
+		Librería MetPyRad
+		\begin{itemize}
+			\item \highlight{Funcionalidades}
+			\begin{itemize}
+				\item Procesado ficheros salida Hidex 300 SL \doing
+				\item Procesado ficheros salida contador de VP \todo
+				\item Procesado ficheros salida prototipo TDCR \todo
+				\item Calculo periodo de semidesintegración desde ficheros \todo
+			\end{itemize}
+			\item \highlight{Componentes}
+			\begin{itemize}
+				\item Código fuente (\href{https://github.com/lmri-met/metpyrad}{GitHub}) \done
+				\item Documentación (\href{https://lmri-met.github.io/metpyrad/}{GitHub Pages}): tutoriales, referencia API, guías prácticas, guías temáticas \done
+				\item Tests: validación numerica \done, funcionalidades \todo
+				\item Infraestructura: metadatos \done, binarios \doing
+				\item Publicación: código \done, documentación \done, paquete \todo
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
 	\subsubsection{Otros}
 
 	\begin{frame}
@@ -194,6 +227,7 @@
 			\rowcolor{blue!40}
 			{\color{white}IR13}&\\
 			MetPyRad: Librería&https://github.com/lmri-met/metpyrad\\
+			MetPyRad: Documentación&https://lmri-met.github.io/metpyrad\\
 			\rowcolor{blue!40}
 			{\color{white}LMRI}&\\
 			Organización del LMRI en GitHub&https://github.com/lmri-met\\
@@ -256,6 +290,9 @@
 			\centering
 			¡Gracias por vuestra atención!
 		\end{block}
+		\bigskip \bigskip \bigskip \bigskip
+		\centering
+		Si sobra algo de tiempo, ver \hyperlink{targetframe}{esta diapositiva}
 	\end{frame}
 
 \end{document}
